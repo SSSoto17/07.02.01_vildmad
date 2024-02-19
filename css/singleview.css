@@ -23,6 +23,7 @@ img.mushroom {
 section.overview article,
 section.info article {
   padding: 1rem;
+  max-width: 500px;
 }
 
 section.overview h1 {
