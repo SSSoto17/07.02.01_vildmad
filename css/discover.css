@@ -15,15 +15,15 @@
 #discover_hero h1 {
   padding: 1rem;
   font-size: 2rem;
+  min-width: 250px;
 }
 
 #discover_hero h1.season {
-  display: none;
+  font-size: 5rem;
 }
 
-#discover_hero h1.no_season {
-  min-width: 250px;
-  /* display: none; */
+#discover_hero h1.hide {
+  display: none;
 }
 
 #discover_hero h1.no_season span {

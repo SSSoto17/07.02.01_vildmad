@@ -1,12 +1,34 @@
 const urlParams = new URLSearchParams(window.location.search);
-const seasonURL = urlParams.get("season");
+const seasonURL = urlParams.get("seasons");
 let url;
 
 if (seasonURL) {
-  url = `https://exjdxiojjqpysmemownv.supabase.co/rest/v1/wildfood_mushrooms?season=cs.["Summer"]`;
+  url = `https://exjdxiojjqpysmemownv.supabase.co/rest/v1/wildfood_mushrooms?season=cs.["${seasonURL}"]`;
+  document.querySelector("#discover_hero h1.no_season").classList.add("hide");
+  document.querySelector("#discover_hero h1.season").classList.remove("hide");
+  if (seasonURL == "Winter") {
+    document.querySelector("#discover_hero").style.backgroundImage =
+      "url('../svg/season_winter.svg')";
+    document.querySelector("#discover_hero h1.season").textContent = "Winter";
+  } else if (seasonURL == "Spring") {
+    document.querySelector("#discover_hero").style.backgroundImage =
+      "url('../svg/season_spring.svg')";
+    document.querySelector("#discover_hero h1.season").textContent = "Spring";
+  } else if (seasonURL == "Summer") {
+    document.querySelector("#discover_hero").style.backgroundImage =
+      "url('../svg/season_summer.svg')";
+    document.querySelector("#discover_hero h1.season").textContent = "Summer";
+  } else if (seasonURL == "Fall") {
+    document.querySelector("#discover_hero").style.backgroundImage =
+      "url('../svg/season_fall.svg')";
+    document.querySelector("#discover_hero h1.season").textContent = "Fall";
+  }
 } else {
   url = "https://exjdxiojjqpysmemownv.supabase.co/rest/v1/wildfood_mushrooms";
-  // url = `https://exjdxiojjqpysmemownv.supabase.co/rest/v1/wildfood_mushrooms?season=cs.["Summer"]`;
+  document
+    .querySelector("#discover_hero h1.no_season")
+    .classList.remove("hide");
+  document.querySelector("#discover_hero h1.season").classList.add("hide");
 }
 
 fetch(url, {
@@ -25,14 +47,6 @@ function showData(mushrooms) {
 }
 
 function listMushrooms(mushroom) {
-  // document.querySelector(
-  //   ".discover_menu a"
-  // ).href = `discover.html?season=${listMushrooms.season}`;
-
-  // document.querySelector(
-  //   ".discover_menu a"
-  // ).href = `discover.html?season=cs.["${season}"]`;
-
   const cardTemplate = document.querySelector(".card_template").content;
   const tempClone = cardTemplate.cloneNode(true);
 
