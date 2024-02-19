@@ -25,6 +25,11 @@ function showData(mushroom) {
   const tempClone = shroomTemplate.cloneNode(true);
 
   // INSERTING DATA INTO TEMPLATE
+  tempClone.querySelector(
+    "section.overview ul.breadcrumb li.mushroom a span"
+  ).textContent = singleShroom.name;
+  tempClone.querySelector("section.overview ul.breadcrumb li.mushroom a").href =
+    "mushroom.html?id=" + singleShroom.id;
   tempClone.querySelector("section.overview img.location").src =
     singleShroom.location_img_src;
   tempClone.querySelector("section.overview img.mushroom").src =

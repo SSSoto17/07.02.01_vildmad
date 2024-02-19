@@ -1,5 +1,18 @@
 /* MOBILE */
 
+section.overview ul.breadcrumb {
+  display: flex;
+  gap: 1rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+section.overview ul.breadcrumb a:hover {
+  color: var(--green-light);
+}
+
 section.overview .img {
   position: relative;
   aspect-ratio: 16 / 9;
@@ -23,6 +36,7 @@ img.mushroom {
 section.overview article,
 section.info article {
   padding: 1rem;
+  max-width: 500px;
 }
 
 section.overview h1 {
