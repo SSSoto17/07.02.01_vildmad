@@ -60,6 +60,15 @@ section.contact .services_input label {
     padding: 2rem 3rem;
   }
 
+  section.contact_desc article {
+    background-image: url("/svg/talebobbel2.svg");
+    background-repeat: no-repeat;
+    background-size: 110% 110%;
+    background-position: 30% 200%;
+    aspect-ratio: 4/5;
+    bottom: 5rem;
+  }
+
   section.contact_desc .mascot {
     display: block;
     width: 200px;
