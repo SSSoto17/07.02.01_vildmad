@@ -1,11 +1,20 @@
+// SETTING UP URL PARAMETERS
+
 const urlParams = new URLSearchParams(window.location.search);
 const seasonURL = urlParams.get("seasons");
 let url;
 
+// FILTER BY SEASON
+
 if (seasonURL) {
+  // SEARCH URL FOR SEASON PARAMETER
   url = `https://exjdxiojjqpysmemownv.supabase.co/rest/v1/wildfood_mushrooms?season=cs.["${seasonURL}"]`;
+
+  // HIDE AND DISPLAY DIFFERENT HEADINGS
   document.querySelector("#discover_hero h1.no_season").classList.add("hide");
   document.querySelector("#discover_hero h1.season").classList.remove("hide");
+
+  // CHANGE HERO IMAGE AND HEADING BASED ON SEASON
   if (seasonURL == "Winter") {
     document.querySelector("#discover_hero").style.backgroundImage =
       "url('../svg/season_winter.svg')";
@@ -24,13 +33,17 @@ if (seasonURL) {
     document.querySelector("#discover_hero h1.season").textContent = "Fall";
   }
 } else {
+  // SET URL TO DEFAULT WITHOUT SEASON FILTER
   url = "https://exjdxiojjqpysmemownv.supabase.co/rest/v1/wildfood_mushrooms";
+
+  // HIDE AND DISPLAY DIFFERENT HEADINGS
   document
     .querySelector("#discover_hero h1.no_season")
     .classList.remove("hide");
   document.querySelector("#discover_hero h1.season").classList.add("hide");
 }
 
+// FETCH DATA FROM SUPABASE WITH API KEY
 fetch(url, {
   method: "GET",
   headers: {
@@ -41,24 +54,25 @@ fetch(url, {
   .then((res) => res.json())
   .then(showData);
 
+// LOOP DATA IN PREPARATION FOR TEMPLATE
+
 function showData(mushrooms) {
   console.log(mushrooms);
   mushrooms.forEach(listMushrooms);
 }
 
 function listMushrooms(mushroom) {
+  // CREATE AND CLONE TEMPLATE
   const cardTemplate = document.querySelector(".card_template").content;
   const tempClone = cardTemplate.cloneNode(true);
 
+  // EDIT CONTENT IN TEMPLATE
   tempClone.querySelector("h1").textContent = mushroom.name;
   tempClone.querySelector("h2").textContent = mushroom.intro_text;
   tempClone.querySelector("img").src = mushroom.img_src;
   tempClone.querySelector("a").href = `mushroom.html?id=${mushroom.id}`;
 
+  // APPEND TEMPLATE IN HTML FILE
   const listContainer = document.querySelector(".grid_container");
   listContainer.appendChild(tempClone);
 }
-
-// set if else parameters for discover hero image
-// document.querySelector("#discover_hero").style.backgroundImage = "url('../svg/season_winter.svg')";
-// document.querySelector("#discover_hero h1.season").textContent = "Fall";
