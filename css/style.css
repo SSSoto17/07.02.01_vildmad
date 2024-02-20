@@ -83,6 +83,21 @@ article.season a:hover {
   transform: scale(1.05);
 }
 
+article.spring {
+  background-image: url("../svg/season_spring.svg");
+  /* background-position: 33%; */
+}
+
+article.summer {
+  background-image: url("../svg/season_summer.svg");
+  /* background-position: 66%; */
+}
+
+article.fall {
+  background-image: url("../svg/season_fall.svg");
+  /* background-position: 99%; */
+}
+
 /* SEASONS - DESKTOP */
 
 @media (min-width: 800px) {
@@ -96,20 +111,26 @@ article.season a:hover {
 
   article.season {
     height: 100%;
+    transition: transform 0.2s ease-in;
+  }
+
+  article.season:hover {
+    transform: scale(1.05);
+    z-index: 1;
   }
 
   article.spring {
-    background-image: url("../svg/season_spring.svg");
+    /* background-image: url("../svg/season_spring.svg"); */
     background-position: 33%;
   }
 
   article.summer {
-    background-image: url("../svg/season_summer.svg");
+    /* background-image: url("../svg/season_summer.svg"); */
     background-position: 66%;
   }
 
   article.fall {
-    background-image: url("../svg/season_fall.svg");
+    /* background-image: url("../svg/season_fall.svg"); */
     background-position: 99%;
   }
 }
