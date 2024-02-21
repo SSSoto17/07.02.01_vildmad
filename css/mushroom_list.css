@@ -39,17 +39,18 @@ article.mushroom_card h2 {
 
 article.mushroom_card h1 {
   text-transform: uppercase;
-  font-weight: 800;
+  font-weight: 600;
   font-size: 1.5rem;
   margin-bottom: 0;
   padding: 1rem 1rem 0;
 }
 
-article.mushroom_card h2 {
-  font-weight: 400;
-  font-size: 1.2rem;
-  text-transform: none;
+article.mushroom_card p {
+  /* font-weight: 400; */
+  /* font-size: 1.2rem; */
+  /* text-transform: none; */
   padding: 0 1rem 1rem;
+  display: none;
 }
 
 /* DESKTOP */

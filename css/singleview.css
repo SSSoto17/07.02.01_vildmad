@@ -37,6 +37,7 @@ section.overview article,
 section.info article {
   padding: 1rem;
   max-width: 500px;
+  margin: auto;
 }
 
 section.overview h1 {
@@ -86,10 +87,23 @@ section.info ul.choices i {
     margin-top: 20vh;
   }
 
+  section.overview .img {
+    margin-bottom: 5rem;
+  }
+
+  img.mushroom {
+    bottom: -80px;
+  }
+
   section.info {
-    max-width: 1200px;
+    max-width: 800px;
     margin: auto;
     padding: 1rem;
+  }
+
+  section.overview article,
+  section.info article {
+    margin: 0;
   }
 }
 
@@ -100,6 +114,7 @@ section.info ul.choices i {
   }
 
   section.info {
+    max-width: 1200px;
     grid-template-columns: 1fr 2fr 3fr;
   }
 

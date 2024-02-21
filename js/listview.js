@@ -68,7 +68,7 @@ function listMushrooms(mushroom) {
 
   // EDIT CONTENT IN TEMPLATE
   tempClone.querySelector("h1").textContent = mushroom.name;
-  tempClone.querySelector("h2").textContent = mushroom.intro_text;
+  tempClone.querySelector("p").textContent = mushroom.intro_text;
   tempClone.querySelector("img").src = mushroom.img_src;
 
   if (seasonURL) {

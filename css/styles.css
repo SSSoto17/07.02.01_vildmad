@@ -9,6 +9,9 @@
 
 /* INDEX */
 
+@import url("index_hero.css");
+@import url("index_seasons.css");
+
 /* DISCOVER */
 @import url("discover.css");
 @import url("mushroom_list.css");

@@ -24,3 +24,27 @@
   --yellow: #f2c744;
   --dark: #232323;
 }
+
+/* MASCOT */
+
+.mascot {
+  background-image: url("../svg/mascot.svg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  aspect-ratio: 519.47 / 602.18;
+  width: 175px;
+}
+
+/* BUTTON */
+
+.btn {
+  display: block;
+  padding: 1rem 2rem;
+  background-color: var(--green-dark);
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.1rem;
+}
