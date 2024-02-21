@@ -70,7 +70,14 @@ function listMushrooms(mushroom) {
   tempClone.querySelector("h1").textContent = mushroom.name;
   tempClone.querySelector("h2").textContent = mushroom.intro_text;
   tempClone.querySelector("img").src = mushroom.img_src;
-  tempClone.querySelector("a").href = `mushroom.html?id=${mushroom.id}`;
+
+  if (seasonURL) {
+    tempClone.querySelector(
+      "a"
+    ).href = `mushroom.html?id=${mushroom.id}&seasons=${seasonURL}`;
+  } else {
+    tempClone.querySelector("a").href = `mushroom.html?id=${mushroom.id}`;
+  }
 
   // APPEND TEMPLATE IN HTML FILE
   const listContainer = document.querySelector(".grid_container");

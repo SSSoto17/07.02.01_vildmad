@@ -87,9 +87,11 @@ section.contact .services_input label {
 
   section.contact_desc .mascot {
     display: block;
-    width: 200px;
+    width: 250px;
     position: absolute;
     bottom: 1rem;
     right: 2rem;
+    background-image: url("../svg/mascot_happy.svg");
+    aspect-ratio: 1323.44 / 1538.48;
   }
 }

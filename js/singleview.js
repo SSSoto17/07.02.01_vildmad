@@ -1,5 +1,6 @@
 const urlParams = new URLSearchParams(window.location.search);
 const id = urlParams.get("id");
+const seasonURL = urlParams.get("seasons");
 const url = `https://exjdxiojjqpysmemownv.supabase.co/rest/v1/wildfood_mushrooms?id=eq.${id}`;
 
 // FETCHING DATABASE
@@ -25,6 +26,15 @@ function showData(mushroom) {
   const tempClone = shroomTemplate.cloneNode(true);
 
   // INSERTING DATA INTO TEMPLATE
+  if (seasonURL) {
+    tempClone.querySelector(
+      "section.overview ul.breadcrumb li.season a span"
+    ).textContent = seasonURL;
+    tempClone.querySelector(
+      "section.overview ul.breadcrumb li.season a"
+    ).href = `discover.html?seasons=${seasonURL}`;
+  }
+
   tempClone.querySelector(
     "section.overview ul.breadcrumb li.mushroom a span"
   ).textContent = singleShroom.name;
