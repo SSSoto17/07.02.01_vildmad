@@ -122,7 +122,7 @@ section.contact .services_input input:checked {
   }
 
   section.contact_desc .speech_bubble {
-    background-image: url("/svg/talebobbel2.svg");
+    background-image: url("../svg/speechbubble_v2.svg");
     background-repeat: no-repeat;
     background-size: 100%;
     aspect-ratio: 214.5 / 185;

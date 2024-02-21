@@ -5,8 +5,8 @@
 
 @font-face {
   font-family: "florest", sans-serif;
-  src: url("../webfont_florest/FlorestRegular.woff2") format("woff2"),
-    url("./webfont_florest/FlorestRegular.woff") format("woff");
+  src: url("/webfont_florest/FlorestRegular.woff2") format("woff2"),
+    url("/webfont_florest/FlorestRegular.woff") format("woff");
 }
 
 :root {

@@ -17,19 +17,19 @@ if (seasonURL) {
   // CHANGE HERO IMAGE AND HEADING BASED ON SEASON
   if (seasonURL == "Winter") {
     document.querySelector("#discover_hero").style.backgroundImage =
-      "url('../svg/season_winter.svg')";
+      "url('svg/season_winter.svg')";
     document.querySelector("#discover_hero h1.season").textContent = "Winter";
   } else if (seasonURL == "Spring") {
     document.querySelector("#discover_hero").style.backgroundImage =
-      "url('../svg/season_spring.svg')";
+      "url('svg/season_spring.svg')";
     document.querySelector("#discover_hero h1.season").textContent = "Spring";
   } else if (seasonURL == "Summer") {
     document.querySelector("#discover_hero").style.backgroundImage =
-      "url('../svg/season_summer.svg')";
+      "url('svg/season_summer.svg')";
     document.querySelector("#discover_hero h1.season").textContent = "Summer";
   } else if (seasonURL == "Fall") {
     document.querySelector("#discover_hero").style.backgroundImage =
-      "url('../svg/season_fall.svg')";
+      "url('svg/season_fall.svg')";
     document.querySelector("#discover_hero h1.season").textContent = "Fall";
   }
 } else {

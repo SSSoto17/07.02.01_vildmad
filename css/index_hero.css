@@ -58,7 +58,7 @@
 @media (min-width: 1300px) {
   #hero .speech_bubble {
     background-color: transparent;
-    background-image: url(../svg/talebobbel.svg);
+    background-image: url(../svg/speechbubble_v1.svg);
     background-size: 100%;
     background-repeat: no-repeat;
     aspect-ratio: 877 / 487;
